@@ -21,6 +21,12 @@ gem "importmap-rails"
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 
+#active-record-serializer
+gem 'active_model_serializers'
+
+#for authentication, bcrypt
+gem 'bcrypt'
+
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 
