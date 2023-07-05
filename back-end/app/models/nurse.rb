@@ -1,3 +1,3 @@
 class Nurse < ApplicationRecord
-    has_many :patients through::doctor
+    has_many :patients, through::doctor
 end
