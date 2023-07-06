@@ -27,6 +27,9 @@ gem 'active_model_serializers'
 #for authentication, bcrypt
 gem 'bcrypt'
 
+#to generate fake seed data using faker
+gem 'faker'
+
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 
