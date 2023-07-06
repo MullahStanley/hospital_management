@@ -1,0 +1,9 @@
+.navbar a{
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 1.5rem;
+	color: blueviolet;
+}
+
+tr{
+	gap: 1em;
+}
