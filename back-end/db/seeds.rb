@@ -2,13 +2,17 @@ require 'faker'
 
 phone_number = Faker::PhoneNumber.phone_number_with_country_code
 
+genders = ['Male', 'Female']
+random_gender = genders.sample
+
 puts 'Seeding nurses:'
 6.times do
   Nurse.create!(
     [
       {
         name: Faker::Name.name,
-        phone: phone_number
+        phone: phone_number,
+        gender: random_gender
       },
     ],
   )
@@ -19,6 +23,7 @@ puts 'Seeding doctors'
     [
       {
         name: Faker::Name.name,
+        gender: random_gender,
         speciality: [
           'Dermatology',
           'Cardiology',
@@ -40,6 +45,7 @@ puts 'Seeding patients...'
     [
       {
         name: Faker::Name.name,
+        gender: random_gender,
         email: Faker::Internet.email,
         condition: [
           'Bacterial vaginosis',
