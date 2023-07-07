@@ -1,13 +1,27 @@
-Rails.application.routes.draw do
-  resources :patients, only: [:index, :create, :destroy]
-  resources :nurses
-  resources :doctors
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  post '/patients', to: 'patients#create'
-  post '/login', to: 'patients#login'
-  get '/appointments', to: 'patients#appointments'
-  post '/appointments', to: 'patients#book_appointment'
-  delete '/appointments/:id', to: 'patients#delete_appointment'
-  # Defines the root path route ("/")
-  # root "articles#index"
-end
+# For all users (nurses, doctors, patients)
+root to: 'home#index' # Homepage
+
+# For patients
+# Register a patient with a nurse of their choice
+post '/register', to: 'patients#register'
+
+# Login after signing up
+post '/login', to: 'patients#login' 
+
+# Display a list of all patient's appointments
+get '/appointments', to: 'patients#appointments' 
+
+# Book an appointment with a preferred practitioner
+post '/appointments', to: 'patients#create_appointment' 
+
+# Delete a listed appointment
+delete '/appointments/:id', to: 'patients#delete_appointment' 
+
+# Logout of the session
+delete '/logout', to: 'sessions#logout' 
+
+# For nurses
+resources :nurses
+
+# For doctors
+resources :doctors

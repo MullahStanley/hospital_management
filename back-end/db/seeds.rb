@@ -1,9 +1,14 @@
+require 'faker'
+
+phone_number = Faker::PhoneNumber.phone_number_with_country_code
+
 puts 'Seeding nurses:'
 6.times do
   Nurse.create!(
     [
       {
         name: Faker::Name.name,
+        phone: phone_number
       },
     ],
   )
@@ -23,7 +28,7 @@ puts 'Seeding doctors'
           'Ophthalmology',
           'Psychiatry',
         ].sample,
-        phone: Faker::PhoneNumber.cell_phone_in_e164,
+        phone: phone_number,
         location: Faker::Address.full_address
       },
     ],
@@ -35,6 +40,7 @@ puts 'Seeding patients...'
     [
       {
         name: Faker::Name.name,
+        email: Faker::Internet.email,
         condition: [
           'Bacterial vaginosis',
           'Acne',
@@ -43,7 +49,7 @@ puts 'Seeding patients...'
           'Malaria',
         ].sample,
         nurse_id: rand(1..6),
-        password: Faker::Internet.password(min_length: 8, max_length: 10),
+        password: Faker::Internet.password(min_length: 8, max_length: 10)
       },
     ],
   )

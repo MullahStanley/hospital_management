@@ -1,3 +1,4 @@
 class NurseSerializer < ActiveModel::Serializer
-  attributes :id, :name, :gender, :department, :specialiaty
+  attributes :id, :name
+  attribute :phone, :string
 end

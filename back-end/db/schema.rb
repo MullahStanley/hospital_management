@@ -10,13 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_04_081754) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_07_063255) do
   create_table "appointments", force: :cascade do |t|
     t.integer "patient_id", null: false
     t.integer "doctor_id", null: false
     t.datetime "scheduled_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "date"
+    t.string "duration"
+    t.string "appointment_type"
     t.index ["doctor_id"], name: "index_appointments_on_doctor_id"
     t.index ["patient_id"], name: "index_appointments_on_patient_id"
   end
@@ -28,6 +31,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_04_081754) do
     t.text "speciality"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "phone"
+    t.string "location"
   end
 
   create_table "nurses", force: :cascade do |t|
@@ -37,6 +42,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_04_081754) do
     t.string "department"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "phone"
   end
 
   create_table "patients", force: :cascade do |t|
@@ -48,6 +54,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_04_081754) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "condition"
+    t.string "nurse_id"
   end
 
   create_table "user_tokens", force: :cascade do |t|
