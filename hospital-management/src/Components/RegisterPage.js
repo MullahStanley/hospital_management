@@ -24,7 +24,7 @@ export default function SignUp() {
 	};
 
 	useEffect(() => {
-		fetch('https://quikhealth-l66y.onrender.com/nurses', {
+		fetch('http://127.0.0.1:3000/nurses', {
 			method: 'GET',
 			credentials: 'include',
 			headers: {

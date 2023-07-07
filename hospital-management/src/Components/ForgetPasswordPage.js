@@ -14,7 +14,7 @@ export default function ForgetPasswordPage() {
 
 	function handleResetPassword(e) {
 		e.preventDefault();
-		fetch(`/reset-password/${userName}`, {
+		fetch(`http://127.0.0.1:3000/reset-password/${userName}`, {
 			method: 'PUT',
 			headers: {
 				'Content-Type': 'application/json',

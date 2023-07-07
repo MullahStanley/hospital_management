@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import '../styling/createappointment.css';
-import { useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
+import '../styling/updateappointment.css';
 
-export default function CreateAppointment() {
-	const [doctor, setDoctor] = useState(null);
+export default function UpdateAppointment() {
+	const params = useParams();
+	const id = params.id;
+
+	const [doctor, setDoctor] = useState('');
 	const [date, setDate] = useState('');
 	const [duration, setDuration] = useState('');
 	const [appointment, setAppointment] = useState('');
@@ -13,7 +16,7 @@ export default function CreateAppointment() {
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		fetch('/doctors',{
+		fetch('http://127.0.0.1:3000/doctors', {
 			method: 'GET',
 			credentials: 'include'
 		})
@@ -36,15 +39,15 @@ export default function CreateAppointment() {
 		appointment_type: appointment,
 	};
 
-	function handleCreate(e) {
+	function handleUpdate(e) {
 		e.preventDefault();
-		fetch('/create_appointment', {
-			method: 'post',
+		fetch(`http://127.0.0.1:3000/appointments/${id}`, {
+			method: 'PUT',
 			headers: {
 				'Content-Type': 'application/json',
 			},
 			credentials: 'include',
-			body: JSON.stringify(appointmentData)
+			body: JSON.stringify(appointmentData),
 		}).then((response) => {
 			if (response.ok) {
 				response.json().then((data) => console.log(data));
@@ -56,9 +59,9 @@ export default function CreateAppointment() {
 	}
 
 	return (
-		<div id="create-appointment-page">
-			<form id="create-form" onSubmit={handleCreate}>
-				<h1>Book an Appointment</h1>
+		<div id="update-appointment-page">
+			<form id="update-form" onSubmit={handleUpdate}>
+				<h1>Update Appointment</h1>
 
 				{errors.length > 0 && (
 					<ul style={{ color: 'red' }}>
@@ -115,7 +118,7 @@ export default function CreateAppointment() {
 						style={{ width: '150px' }}
 						type="submit"
 					>
-						Book
+						Update
 					</button>
 				</div>
 			</form>

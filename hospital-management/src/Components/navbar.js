@@ -9,7 +9,7 @@ export default function NavBar() {
 	const navigate = useNavigate();
 
 	function handleLogOut() {
-		fetch('/logout', {
+		fetch('http://127.0.0.1:3000/logout', {
 			method: 'DELETE',
             credentials: 'include'
 		}).then((response) => {

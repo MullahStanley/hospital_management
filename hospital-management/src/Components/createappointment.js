@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import '../styling/updateappointment.css';
+import '../styling/createappointment.css';
+import { useNavigate } from 'react-router-dom';
 
-export default function UpdateAppointment() {
-	const params = useParams();
-	const id = params.id;
-
-	const [doctor, setDoctor] = useState('');
+export default function CreateAppointment() {
+	const [doctor, setDoctor] = useState(null);
 	const [date, setDate] = useState('');
 	const [duration, setDuration] = useState('');
 	const [appointment, setAppointment] = useState('');
@@ -16,7 +13,7 @@ export default function UpdateAppointment() {
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		fetch('/doctors', {
+		fetch('http://127.0.0.1:3000/doctors',{
 			method: 'GET',
 			credentials: 'include'
 		})
@@ -39,15 +36,15 @@ export default function UpdateAppointment() {
 		appointment_type: appointment,
 	};
 
-	function handleUpdate(e) {
+	function handleCreate(e) {
 		e.preventDefault();
-		fetch(`/appointments/${id}`, {
-			method: 'PUT',
+		fetch('/create_appointment', {
+			method: 'post',
 			headers: {
 				'Content-Type': 'application/json',
 			},
 			credentials: 'include',
-			body: JSON.stringify(appointmentData),
+			body: JSON.stringify(appointmentData)
 		}).then((response) => {
 			if (response.ok) {
 				response.json().then((data) => console.log(data));
@@ -59,9 +56,9 @@ export default function UpdateAppointment() {
 	}
 
 	return (
-		<div id="update-appointment-page">
-			<form id="update-form" onSubmit={handleUpdate}>
-				<h1>Update Appointment</h1>
+		<div id="create-appointment-page">
+			<form id="create-form" onSubmit={handleCreate}>
+				<h1>Book an Appointment</h1>
 
 				{errors.length > 0 && (
 					<ul style={{ color: 'red' }}>
@@ -118,7 +115,7 @@ export default function UpdateAppointment() {
 						style={{ width: '150px' }}
 						type="submit"
 					>
-						Update
+						Book
 					</button>
 				</div>
 			</form>

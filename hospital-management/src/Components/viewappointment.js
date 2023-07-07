@@ -9,7 +9,7 @@ export default function ViewAppointment() {
 	const auth = useAuth()
 
 	useEffect(() => {
-		fetch('/patient_appointment', {
+		fetch('http://127.0.0.1:3000/appointments', {
 			method: 'GET',
 			credentials: 'include'
 		}).then((response) => {
@@ -23,7 +23,7 @@ export default function ViewAppointment() {
 
 	function handleDelete(e) {
 		let id = e.target.value;
-		fetch(`/appointments/${id}`, {
+		fetch(`http://127.0.0.1:3000/appointments/${id}`, {
 			method: 'DELETE',
 			credentials: 'include'
 		}).then((response) => {
