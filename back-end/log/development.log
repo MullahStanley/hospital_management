@@ -1331,3 +1331,12 @@ ActionController::RoutingError (uninitialized constant HomeController):
   [1m[36mDoctor Load (0.1ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors" WHERE "doctors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mAppointment Create (0.4ms)[0m  [1m[32mINSERT INTO "appointments" ("patient_id", "doctor_id", "scheduled_at", "created_at", "updated_at", "date", "duration", "appointment_type") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["patient_id", 6], ["doctor_id", 1], ["scheduled_at", nil], ["created_at", "2023-07-07 07:56:48.745756"], ["updated_at", "2023-07-07 07:56:48.745756"], ["date", "2023-07-21"], ["duration", "20 minutes"], ["appointment_type", "Follow-Up"]]
   [1m[36mTRANSACTION (136.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2023-07-07 11:02:23 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant HomeController):
+  
+Started GET "/patients" for 127.0.0.1 at 2023-07-07 11:02:39 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/patients"):
+  
