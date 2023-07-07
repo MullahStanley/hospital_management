@@ -1159,3 +1159,175 @@ Migrating to AddAppointmentTypeToAppointments (20230707063255)
   [1m[36mDoctor Load (0.1ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors" WHERE "doctors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
   [1m[36mAppointment Create (0.4ms)[0m  [1m[32mINSERT INTO "appointments" ("patient_id", "doctor_id", "scheduled_at", "created_at", "updated_at", "date", "duration", "appointment_type") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["patient_id", 4], ["doctor_id", 2], ["scheduled_at", nil], ["created_at", "2023-07-07 06:58:12.276749"], ["updated_at", "2023-07-07 06:58:12.276749"], ["date", "2023-07-21"], ["duration", "13 minutes"], ["appointment_type", "Consultation"]]
   [1m[36mTRANSACTION (203.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2023-07-07 10:32:24 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant HomeController):
+  
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNurse Create (0.6ms)[0m  [1m[32mINSERT INTO "nurses" ("id!", "name", "gender", "department", "created_at", "updated_at", "phone") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["id!", nil], ["name", "Prof. Neil Simonis"], ["gender", "Male"], ["department", nil], ["created_at", "2023-07-07 07:56:25.637686"], ["updated_at", "2023-07-07 07:56:25.637686"], ["phone", "+36 604-530-3020 x8172"]]
+  [1m[36mTRANSACTION (303.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNurse Create (0.5ms)[0m  [1m[32mINSERT INTO "nurses" ("id!", "name", "gender", "department", "created_at", "updated_at", "phone") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["id!", nil], ["name", "Stephani Roob"], ["gender", "Male"], ["department", nil], ["created_at", "2023-07-07 07:56:25.948072"], ["updated_at", "2023-07-07 07:56:25.948072"], ["phone", "+36 604-530-3020 x8172"]]
+  [1m[36mTRANSACTION (294.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNurse Create (0.3ms)[0m  [1m[32mINSERT INTO "nurses" ("id!", "name", "gender", "department", "created_at", "updated_at", "phone") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["id!", nil], ["name", "Lucille Jakubowski"], ["gender", "Male"], ["department", nil], ["created_at", "2023-07-07 07:56:26.250316"], ["updated_at", "2023-07-07 07:56:26.250316"], ["phone", "+36 604-530-3020 x8172"]]
+  [1m[36mTRANSACTION (252.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNurse Create (0.4ms)[0m  [1m[32mINSERT INTO "nurses" ("id!", "name", "gender", "department", "created_at", "updated_at", "phone") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["id!", nil], ["name", "Lilli Haag"], ["gender", "Male"], ["department", nil], ["created_at", "2023-07-07 07:56:26.508036"], ["updated_at", "2023-07-07 07:56:26.508036"], ["phone", "+36 604-530-3020 x8172"]]
+  [1m[36mTRANSACTION (252.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNurse Create (0.3ms)[0m  [1m[32mINSERT INTO "nurses" ("id!", "name", "gender", "department", "created_at", "updated_at", "phone") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["id!", nil], ["name", "Peggie Spinka"], ["gender", "Male"], ["department", nil], ["created_at", "2023-07-07 07:56:26.766034"], ["updated_at", "2023-07-07 07:56:26.766034"], ["phone", "+36 604-530-3020 x8172"]]
+  [1m[36mTRANSACTION (130.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNurse Create (0.4ms)[0m  [1m[32mINSERT INTO "nurses" ("id!", "name", "gender", "department", "created_at", "updated_at", "phone") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["id!", nil], ["name", "Kari Hahn"], ["gender", "Male"], ["department", nil], ["created_at", "2023-07-07 07:56:26.901716"], ["updated_at", "2023-07-07 07:56:26.901716"], ["phone", "+36 604-530-3020 x8172"]]
+  [1m[36mTRANSACTION (241.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Create (31.1ms)[0m  [1m[32mINSERT INTO "doctors" ("id!", "gender", "name", "speciality", "created_at", "updated_at", "phone", "location") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id!", nil], ["gender", "Male"], ["name", "Jaime Schumm DO"], ["speciality", "Family Medicine"], ["created_at", "2023-07-07 07:56:27.166470"], ["updated_at", "2023-07-07 07:56:27.166470"], ["phone", "+36 604-530-3020 x8172"], ["location", "27502 Paucek Cape, Kylatown, DE 19309"]]
+  [1m[36mTRANSACTION (147.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Create (0.5ms)[0m  [1m[32mINSERT INTO "doctors" ("id!", "gender", "name", "speciality", "created_at", "updated_at", "phone", "location") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id!", nil], ["gender", "Male"], ["name", "Percy Dicki"], ["speciality", "Dermatology"], ["created_at", "2023-07-07 07:56:27.352795"], ["updated_at", "2023-07-07 07:56:27.352795"], ["phone", "+36 604-530-3020 x8172"], ["location", "Apt. 120 22332 Rey Highway, South Floy, TX 94243-0627"]]
+  [1m[36mTRANSACTION (373.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Create (0.4ms)[0m  [1m[32mINSERT INTO "doctors" ("id!", "gender", "name", "speciality", "created_at", "updated_at", "phone", "location") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id!", nil], ["gender", "Male"], ["name", "Pres. Marco Funk"], ["speciality", "Family Medicine"], ["created_at", "2023-07-07 07:56:27.734832"], ["updated_at", "2023-07-07 07:56:27.734832"], ["phone", "+36 604-530-3020 x8172"], ["location", "308 Lilian Squares, Port Roccohaven, CA 30354"]]
+  [1m[36mTRANSACTION (239.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Create (0.4ms)[0m  [1m[32mINSERT INTO "doctors" ("id!", "gender", "name", "speciality", "created_at", "updated_at", "phone", "location") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id!", nil], ["gender", "Male"], ["name", "Jamie Turner"], ["speciality", "Psychiatry"], ["created_at", "2023-07-07 07:56:27.982036"], ["updated_at", "2023-07-07 07:56:27.982036"], ["phone", "+36 604-530-3020 x8172"], ["location", "63757 Gleichner Stream, North Kandyfort, ND 85048-9598"]]
+  [1m[36mTRANSACTION (139.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDoctor Create (0.4ms)[0m  [1m[32mINSERT INTO "doctors" ("id!", "gender", "name", "speciality", "created_at", "updated_at", "phone", "location") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id!", nil], ["gender", "Male"], ["name", "Noble Keeling"], ["speciality", "Psychiatry"], ["created_at", "2023-07-07 07:56:28.128406"], ["updated_at", "2023-07-07 07:56:28.128406"], ["phone", "+36 604-530-3020 x8172"], ["location", "877 Rau Stream, East Isiahtown, NC 21636"]]
+  [1m[36mTRANSACTION (140.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "patients" WHERE "patients"."email" = ? LIMIT ?[0m  [["email", "tyron@gerhold-thompson.test"], ["LIMIT", 1]]
+  [1m[36mPatient Create (0.4ms)[0m  [1m[32mINSERT INTO "patients" ("name", "age", "gender", "medical_history", "email", "password_digest", "created_at", "updated_at", "condition", "nurse_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Fr. Parker Ruecker"], ["age", nil], ["gender", "Male"], ["medical_history", nil], ["email", "tyron@gerhold-thompson.test"], ["password_digest", "[FILTERED]"], ["created_at", "2023-07-07 07:56:28.917976"], ["updated_at", "2023-07-07 07:56:28.917976"], ["condition", "Bacterial vaginosis"], ["nurse_id", "4"]]
+  [1m[36mTRANSACTION (198.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "patients" WHERE "patients"."email" = ? LIMIT ?[0m  [["email", "tu.dibbert@mohr.example"], ["LIMIT", 1]]
+  [1m[36mPatient Create (0.3ms)[0m  [1m[32mINSERT INTO "patients" ("name", "age", "gender", "medical_history", "email", "password_digest", "created_at", "updated_at", "condition", "nurse_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Shane Mills"], ["age", nil], ["gender", "Male"], ["medical_history", nil], ["email", "tu.dibbert@mohr.example"], ["password_digest", "[FILTERED]"], ["created_at", "2023-07-07 07:56:29.756532"], ["updated_at", "2023-07-07 07:56:29.756532"], ["condition", "Malaria"], ["nurse_id", "5"]]
+  [1m[36mTRANSACTION (329.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "patients" WHERE "patients"."email" = ? LIMIT ?[0m  [["email", "leonel_collins@heathcote.test"], ["LIMIT", 1]]
+  [1m[36mPatient Create (0.4ms)[0m  [1m[32mINSERT INTO "patients" ("name", "age", "gender", "medical_history", "email", "password_digest", "created_at", "updated_at", "condition", "nurse_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mickey Carter"], ["age", nil], ["gender", "Male"], ["medical_history", nil], ["email", "leonel_collins@heathcote.test"], ["password_digest", "[FILTERED]"], ["created_at", "2023-07-07 07:56:30.734666"], ["updated_at", "2023-07-07 07:56:30.734666"], ["condition", "Depression"], ["nurse_id", "1"]]
+  [1m[36mTRANSACTION (342.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "patients" WHERE "patients"."email" = ? LIMIT ?[0m  [["email", "chelsie_price@borer.example"], ["LIMIT", 1]]
+  [1m[36mPatient Create (0.4ms)[0m  [1m[32mINSERT INTO "patients" ("name", "age", "gender", "medical_history", "email", "password_digest", "created_at", "updated_at", "condition", "nurse_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Marco Corkery Esq."], ["age", nil], ["gender", "Male"], ["medical_history", nil], ["email", "chelsie_price@borer.example"], ["password_digest", "[FILTERED]"], ["created_at", "2023-07-07 07:56:31.708308"], ["updated_at", "2023-07-07 07:56:31.708308"], ["condition", "Malaria"], ["nurse_id", "2"]]
+  [1m[36mTRANSACTION (160.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "patients" WHERE "patients"."email" = ? LIMIT ?[0m  [["email", "barton@gottlieb.example"], ["LIMIT", 1]]
+  [1m[36mPatient Create (0.3ms)[0m  [1m[32mINSERT INTO "patients" ("name", "age", "gender", "medical_history", "email", "password_digest", "created_at", "updated_at", "condition", "nurse_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Gov. Betsy Feeney"], ["age", nil], ["gender", "Male"], ["medical_history", nil], ["email", "barton@gottlieb.example"], ["password_digest", "[FILTERED]"], ["created_at", "2023-07-07 07:56:32.504114"], ["updated_at", "2023-07-07 07:56:32.504114"], ["condition", "Bacterial vaginosis"], ["nurse_id", "3"]]
+  [1m[36mTRANSACTION (300.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "patients" WHERE "patients"."email" = ? LIMIT ?[0m  [["email", "andre@legros.example"], ["LIMIT", 1]]
+  [1m[36mPatient Create (0.4ms)[0m  [1m[32mINSERT INTO "patients" ("name", "age", "gender", "medical_history", "email", "password_digest", "created_at", "updated_at", "condition", "nurse_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Fabian Wilderman"], ["age", nil], ["gender", "Male"], ["medical_history", nil], ["email", "andre@legros.example"], ["password_digest", "[FILTERED]"], ["created_at", "2023-07-07 07:56:33.455619"], ["updated_at", "2023-07-07 07:56:33.455619"], ["condition", "Allergies"], ["nurse_id", "5"]]
+  [1m[36mTRANSACTION (206.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "patients" WHERE "patients"."email" = ? LIMIT ?[0m  [["email", "maureen@jast.test"], ["LIMIT", 1]]
+  [1m[36mPatient Create (0.3ms)[0m  [1m[32mINSERT INTO "patients" ("name", "age", "gender", "medical_history", "email", "password_digest", "created_at", "updated_at", "condition", "nurse_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Evan Konopelski"], ["age", nil], ["gender", "Male"], ["medical_history", nil], ["email", "maureen@jast.test"], ["password_digest", "[FILTERED]"], ["created_at", "2023-07-07 07:56:34.297482"], ["updated_at", "2023-07-07 07:56:34.297482"], ["condition", "Bacterial vaginosis"], ["nurse_id", "1"]]
+  [1m[36mTRANSACTION (300.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "patients" WHERE "patients"."email" = ? LIMIT ?[0m  [["email", "solomon_thompson@dickens.example"], ["LIMIT", 1]]
+  [1m[36mPatient Create (0.3ms)[0m  [1m[32mINSERT INTO "patients" ("name", "age", "gender", "medical_history", "email", "password_digest", "created_at", "updated_at", "condition", "nurse_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tonette Larkin"], ["age", nil], ["gender", "Male"], ["medical_history", nil], ["email", "solomon_thompson@dickens.example"], ["password_digest", "[FILTERED]"], ["created_at", "2023-07-07 07:56:35.234208"], ["updated_at", "2023-07-07 07:56:35.234208"], ["condition", "Depression"], ["nurse_id", "2"]]
+  [1m[36mTRANSACTION (455.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "patients" WHERE "patients"."email" = ? LIMIT ?[0m  [["email", "gladis_yundt@wisozk.example"], ["LIMIT", 1]]
+  [1m[36mPatient Create (0.4ms)[0m  [1m[32mINSERT INTO "patients" ("name", "age", "gender", "medical_history", "email", "password_digest", "created_at", "updated_at", "condition", "nurse_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ruthann Flatley"], ["age", nil], ["gender", "Male"], ["medical_history", nil], ["email", "gladis_yundt@wisozk.example"], ["password_digest", "[FILTERED]"], ["created_at", "2023-07-07 07:56:36.320189"], ["updated_at", "2023-07-07 07:56:36.320189"], ["condition", "Malaria"], ["nurse_id", "4"]]
+  [1m[36mTRANSACTION (215.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "patients" WHERE "patients"."email" = ? LIMIT ?[0m  [["email", "shila@tremblay-grimes.example"], ["LIMIT", 1]]
+  [1m[36mPatient Create (0.3ms)[0m  [1m[32mINSERT INTO "patients" ("name", "age", "gender", "medical_history", "email", "password_digest", "created_at", "updated_at", "condition", "nurse_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Lindsey Moen MD"], ["age", nil], ["gender", "Male"], ["medical_history", nil], ["email", "shila@tremblay-grimes.example"], ["password_digest", "[FILTERED]"], ["created_at", "2023-07-07 07:56:37.163901"], ["updated_at", "2023-07-07 07:56:37.163901"], ["condition", "Acne"], ["nurse_id", "4"]]
+  [1m[36mTRANSACTION (230.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "patients" WHERE "patients"."email" = ? LIMIT ?[0m  [["email", "allyson@olson.test"], ["LIMIT", 1]]
+  [1m[36mPatient Create (0.3ms)[0m  [1m[32mINSERT INTO "patients" ("name", "age", "gender", "medical_history", "email", "password_digest", "created_at", "updated_at", "condition", "nurse_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Hon. Dia Dach"], ["age", nil], ["gender", "Male"], ["medical_history", nil], ["email", "allyson@olson.test"], ["password_digest", "[FILTERED]"], ["created_at", "2023-07-07 07:56:38.027940"], ["updated_at", "2023-07-07 07:56:38.027940"], ["condition", "Allergies"], ["nurse_id", "3"]]
+  [1m[36mTRANSACTION (117.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "patients" WHERE "patients"."email" = ? LIMIT ?[0m  [["email", "pia@rolfson.example"], ["LIMIT", 1]]
+  [1m[36mPatient Create (0.3ms)[0m  [1m[32mINSERT INTO "patients" ("name", "age", "gender", "medical_history", "email", "password_digest", "created_at", "updated_at", "condition", "nurse_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Corrina Fritsch"], ["age", nil], ["gender", "Male"], ["medical_history", nil], ["email", "pia@rolfson.example"], ["password_digest", "[FILTERED]"], ["created_at", "2023-07-07 07:56:38.772151"], ["updated_at", "2023-07-07 07:56:38.772151"], ["condition", "Acne"], ["nurse_id", "2"]]
+  [1m[36mTRANSACTION (131.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "patients" WHERE "patients"."email" = ? LIMIT ?[0m  [["email", "bryan@keebler.example"], ["LIMIT", 1]]
+  [1m[36mPatient Create (0.4ms)[0m  [1m[32mINSERT INTO "patients" ("name", "age", "gender", "medical_history", "email", "password_digest", "created_at", "updated_at", "condition", "nurse_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Paris Watsica"], ["age", nil], ["gender", "Male"], ["medical_history", nil], ["email", "bryan@keebler.example"], ["password_digest", "[FILTERED]"], ["created_at", "2023-07-07 07:56:39.539831"], ["updated_at", "2023-07-07 07:56:39.539831"], ["condition", "Bacterial vaginosis"], ["nurse_id", "5"]]
+  [1m[36mTRANSACTION (715.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "patients" WHERE "patients"."email" = ? LIMIT ?[0m  [["email", "nathan.mckenzie@nienow.test"], ["LIMIT", 1]]
+  [1m[36mPatient Create (0.3ms)[0m  [1m[32mINSERT INTO "patients" ("name", "age", "gender", "medical_history", "email", "password_digest", "created_at", "updated_at", "condition", "nurse_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Celsa Mayert"], ["age", nil], ["gender", "Male"], ["medical_history", nil], ["email", "nathan.mckenzie@nienow.test"], ["password_digest", "[FILTERED]"], ["created_at", "2023-07-07 07:56:40.891135"], ["updated_at", "2023-07-07 07:56:40.891135"], ["condition", "Acne"], ["nurse_id", "2"]]
+  [1m[36mTRANSACTION (231.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "patients" WHERE "patients"."email" = ? LIMIT ?[0m  [["email", "celesta_gottlieb@orn-stanton.test"], ["LIMIT", 1]]
+  [1m[36mPatient Create (0.3ms)[0m  [1m[32mINSERT INTO "patients" ("name", "age", "gender", "medical_history", "email", "password_digest", "created_at", "updated_at", "condition", "nurse_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mrs. Bobbie Sporer"], ["age", nil], ["gender", "Male"], ["medical_history", nil], ["email", "celesta_gottlieb@orn-stanton.test"], ["password_digest", "[FILTERED]"], ["created_at", "2023-07-07 07:56:41.758320"], ["updated_at", "2023-07-07 07:56:41.758320"], ["condition", "Allergies"], ["nurse_id", "6"]]
+  [1m[36mTRANSACTION (299.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "patients" WHERE "patients"."email" = ? LIMIT ?[0m  [["email", "jules.gibson@douglas.test"], ["LIMIT", 1]]
+  [1m[36mPatient Create (0.3ms)[0m  [1m[32mINSERT INTO "patients" ("name", "age", "gender", "medical_history", "email", "password_digest", "created_at", "updated_at", "condition", "nurse_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Pres. Reggie Legros"], ["age", nil], ["gender", "Male"], ["medical_history", nil], ["email", "jules.gibson@douglas.test"], ["password_digest", "[FILTERED]"], ["created_at", "2023-07-07 07:56:42.700702"], ["updated_at", "2023-07-07 07:56:42.700702"], ["condition", "Acne"], ["nurse_id", "6"]]
+  [1m[36mTRANSACTION (359.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "patients" WHERE "patients"."email" = ? LIMIT ?[0m  [["email", "daysi@leuschke.example"], ["LIMIT", 1]]
+  [1m[36mPatient Create (0.3ms)[0m  [1m[32mINSERT INTO "patients" ("name", "age", "gender", "medical_history", "email", "password_digest", "created_at", "updated_at", "condition", "nurse_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Luis Hartmann DDS"], ["age", nil], ["gender", "Male"], ["medical_history", nil], ["email", "daysi@leuschke.example"], ["password_digest", "[FILTERED]"], ["created_at", "2023-07-07 07:56:43.710363"], ["updated_at", "2023-07-07 07:56:43.710363"], ["condition", "Depression"], ["nurse_id", "5"]]
+  [1m[36mTRANSACTION (340.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "patients" WHERE "patients"."email" = ? LIMIT ?[0m  [["email", "marni_schiller@mayert.example"], ["LIMIT", 1]]
+  [1m[36mPatient Create (0.3ms)[0m  [1m[32mINSERT INTO "patients" ("name", "age", "gender", "medical_history", "email", "password_digest", "created_at", "updated_at", "condition", "nurse_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bryon Shields Jr."], ["age", nil], ["gender", "Male"], ["medical_history", nil], ["email", "marni_schiller@mayert.example"], ["password_digest", "[FILTERED]"], ["created_at", "2023-07-07 07:56:44.672332"], ["updated_at", "2023-07-07 07:56:44.672332"], ["condition", "Depression"], ["nurse_id", "3"]]
+  [1m[36mTRANSACTION (292.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "patients" WHERE "patients"."email" = ? LIMIT ?[0m  [["email", "jae_ward@simonis-runte.test"], ["LIMIT", 1]]
+  [1m[36mPatient Create (0.4ms)[0m  [1m[32mINSERT INTO "patients" ("name", "age", "gender", "medical_history", "email", "password_digest", "created_at", "updated_at", "condition", "nurse_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Carina Crona"], ["age", nil], ["gender", "Male"], ["medical_history", nil], ["email", "jae_ward@simonis-runte.test"], ["password_digest", "[FILTERED]"], ["created_at", "2023-07-07 07:56:45.596373"], ["updated_at", "2023-07-07 07:56:45.596373"], ["condition", "Malaria"], ["nurse_id", "4"]]
+  [1m[36mTRANSACTION (204.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "patients" WHERE "patients"."email" = ? LIMIT ?[0m  [["email", "donny@corkery.example"], ["LIMIT", 1]]
+  [1m[36mPatient Create (0.5ms)[0m  [1m[32mINSERT INTO "patients" ("name", "age", "gender", "medical_history", "email", "password_digest", "created_at", "updated_at", "condition", "nurse_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jamison Tremblay"], ["age", nil], ["gender", "Male"], ["medical_history", nil], ["email", "donny@corkery.example"], ["password_digest", "[FILTERED]"], ["created_at", "2023-07-07 07:56:46.426201"], ["updated_at", "2023-07-07 07:56:46.426201"], ["condition", "Malaria"], ["nurse_id", "5"]]
+  [1m[36mTRANSACTION (209.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mDoctor Load (0.2ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors" WHERE "doctors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAppointment Create (0.6ms)[0m  [1m[32mINSERT INTO "appointments" ("patient_id", "doctor_id", "scheduled_at", "created_at", "updated_at", "date", "duration", "appointment_type") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["patient_id", 8], ["doctor_id", 1], ["scheduled_at", nil], ["created_at", "2023-07-07 07:56:46.677692"], ["updated_at", "2023-07-07 07:56:46.677692"], ["date", "2023-07-19"], ["duration", "11 minutes"], ["appointment_type", "Routine Care"]]
+  [1m[36mTRANSACTION (127.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDoctor Load (0.1ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors" WHERE "doctors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mAppointment Create (0.4ms)[0m  [1m[32mINSERT INTO "appointments" ("patient_id", "doctor_id", "scheduled_at", "created_at", "updated_at", "date", "duration", "appointment_type") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["patient_id", 1], ["doctor_id", 4], ["scheduled_at", nil], ["created_at", "2023-07-07 07:56:46.815680"], ["updated_at", "2023-07-07 07:56:46.815680"], ["date", "2023-07-22"], ["duration", "24 minutes"], ["appointment_type", "Follow-Up"]]
+  [1m[36mTRANSACTION (136.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Load (0.1ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mDoctor Load (0.1ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors" WHERE "doctors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAppointment Create (0.4ms)[0m  [1m[32mINSERT INTO "appointments" ("patient_id", "doctor_id", "scheduled_at", "created_at", "updated_at", "date", "duration", "appointment_type") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["patient_id", 4], ["doctor_id", 3], ["scheduled_at", nil], ["created_at", "2023-07-07 07:56:46.962632"], ["updated_at", "2023-07-07 07:56:46.962632"], ["date", "2023-07-23"], ["duration", "26 minutes"], ["appointment_type", "Routine Care"]]
+  [1m[36mTRANSACTION (247.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Load (0.1ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mDoctor Load (0.1ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors" WHERE "doctors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAppointment Create (0.4ms)[0m  [1m[32mINSERT INTO "appointments" ("patient_id", "doctor_id", "scheduled_at", "created_at", "updated_at", "date", "duration", "appointment_type") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["patient_id", 7], ["doctor_id", 3], ["scheduled_at", nil], ["created_at", "2023-07-07 07:56:47.220377"], ["updated_at", "2023-07-07 07:56:47.220377"], ["date", "2023-07-21"], ["duration", "17 minutes"], ["appointment_type", "Follow-Up"]]
+  [1m[36mTRANSACTION (248.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Load (0.1ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mDoctor Load (0.2ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors" WHERE "doctors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mAppointment Create (0.4ms)[0m  [1m[32mINSERT INTO "appointments" ("patient_id", "doctor_id", "scheduled_at", "created_at", "updated_at", "date", "duration", "appointment_type") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["patient_id", 9], ["doctor_id", 4], ["scheduled_at", nil], ["created_at", "2023-07-07 07:56:47.479739"], ["updated_at", "2023-07-07 07:56:47.479739"], ["date", "2023-07-24"], ["duration", "29 minutes"], ["appointment_type", "Follow-Up"]]
+  [1m[36mTRANSACTION (235.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Load (0.1ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mDoctor Load (0.1ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors" WHERE "doctors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAppointment Create (0.5ms)[0m  [1m[32mINSERT INTO "appointments" ("patient_id", "doctor_id", "scheduled_at", "created_at", "updated_at", "date", "duration", "appointment_type") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["patient_id", 3], ["doctor_id", 3], ["scheduled_at", nil], ["created_at", "2023-07-07 07:56:47.724911"], ["updated_at", "2023-07-07 07:56:47.724911"], ["date", "2023-07-08"], ["duration", "15 minutes"], ["appointment_type", "Routine Care"]]
+  [1m[36mTRANSACTION (237.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Load (0.1ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mDoctor Load (0.1ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors" WHERE "doctors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAppointment Create (0.4ms)[0m  [1m[32mINSERT INTO "appointments" ("patient_id", "doctor_id", "scheduled_at", "created_at", "updated_at", "date", "duration", "appointment_type") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["patient_id", 6], ["doctor_id", 1], ["scheduled_at", nil], ["created_at", "2023-07-07 07:56:47.972098"], ["updated_at", "2023-07-07 07:56:47.972098"], ["date", "2023-07-10"], ["duration", "17 minutes"], ["appointment_type", "Urgent Visit"]]
+  [1m[36mTRANSACTION (248.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Load (0.1ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mDoctor Load (0.1ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors" WHERE "doctors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAppointment Create (0.4ms)[0m  [1m[32mINSERT INTO "appointments" ("patient_id", "doctor_id", "scheduled_at", "created_at", "updated_at", "date", "duration", "appointment_type") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["patient_id", 9], ["doctor_id", 1], ["scheduled_at", nil], ["created_at", "2023-07-07 07:56:48.230290"], ["updated_at", "2023-07-07 07:56:48.230290"], ["date", "2023-07-26"], ["duration", "12 minutes"], ["appointment_type", "Consultation"]]
+  [1m[36mTRANSACTION (247.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mDoctor Load (0.1ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors" WHERE "doctors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAppointment Create (0.4ms)[0m  [1m[32mINSERT INTO "appointments" ("patient_id", "doctor_id", "scheduled_at", "created_at", "updated_at", "date", "duration", "appointment_type") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["patient_id", 9], ["doctor_id", 3], ["scheduled_at", nil], ["created_at", "2023-07-07 07:56:48.488601"], ["updated_at", "2023-07-07 07:56:48.488601"], ["date", "2023-07-30"], ["duration", "26 minutes"], ["appointment_type", "Follow-Up"]]
+  [1m[36mTRANSACTION (247.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mDoctor Load (0.1ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors" WHERE "doctors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAppointment Create (0.4ms)[0m  [1m[32mINSERT INTO "appointments" ("patient_id", "doctor_id", "scheduled_at", "created_at", "updated_at", "date", "duration", "appointment_type") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["patient_id", 6], ["doctor_id", 1], ["scheduled_at", nil], ["created_at", "2023-07-07 07:56:48.745756"], ["updated_at", "2023-07-07 07:56:48.745756"], ["date", "2023-07-21"], ["duration", "20 minutes"], ["appointment_type", "Follow-Up"]]
+  [1m[36mTRANSACTION (136.9ms)[0m  [1m[36mcommit transaction[0m
