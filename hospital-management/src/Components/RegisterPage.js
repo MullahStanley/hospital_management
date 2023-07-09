@@ -9,7 +9,6 @@ export default function SignUp() {
 	const [password, setPassword] = useState('');
 	const [condition, setCondition] = useState('');
 	const [nurse, setNurse] = useState('');
-	const [nurses, setNurses] = useState([]);
 	const [errors, setErrors] = useState([]);
 
 	const auth = useAuth()

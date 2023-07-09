@@ -20,7 +20,7 @@ class PatientsController < ApplicationController
         patient = Patient.new(patient_params)
         if patient.save
             token = patient.generate_token
-            render json: { patient: patient, token: token },status::created
+            render json: { patient: patient, token: token }, status: :created
         else
             render json: { error:'Invalid email or password' }, status: :unauthorised
         end
@@ -52,15 +52,12 @@ class PatientsController < ApplicationController
     
       private
     
-      def patient_params
-        params.require(:patient).permit(:name, :email, :password, :password_confirmation)
-      end
+        def patient_params
+          params.require(:patient).permit(:name, :email, :password, :password_confirmation)
+        end
     
         def current_patient
           token = cookies.signed[:auth_token]
           UserToken.find_by(token: token)&.user
         end
-      
-    end
-
 end

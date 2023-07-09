@@ -48,7 +48,7 @@ export default function ViewAppointment() {
 					<div className="col-6">
 						<Link
 							className="btn btn-info"
-							to={`/update-appointment/${appointment.id}`}
+							to={`http://127.0.0.1:3000/appointments/${appointment.id}`}
 						>
 							Update
 						</Link>
@@ -76,7 +76,7 @@ export default function ViewAppointment() {
 			</div>
 
 			<div id="add-button">
-				<Link className="btn btn-success" to="/create-appointment">
+				<Link className="btn btn-success" to="/appointments">
 					<span style={{ fontSize: '25px' }}>+</span> Create Appointment
 				</Link>
 			</div>

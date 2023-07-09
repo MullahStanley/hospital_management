@@ -1340,3 +1340,145 @@ Started GET "/patients" for 127.0.0.1 at 2023-07-07 11:02:39 +0300
   
 ActionController::RoutingError (No route matches [GET] "/patients"):
   
+Started GET "/" for 127.0.0.1 at 2023-07-09 12:12:18 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant HomeController):
+  
+Started GET "/" for 127.0.0.1 at 2023-07-09 12:16:58 +0300
+  
+SyntaxError (/home/mullz/Desktop/project/hospital_management/back-end/app/controllers/patients_controller.rb:23: syntax error, unexpected '\n', expecting =>
+/home/mullz/Desktop/project/hospital_management/back-end/app/controllers/patients_controller.rb:66: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/patients_controller.rb:23: syntax error, unexpected '\n', expecting =>
+app/controllers/patients_controller.rb:66: syntax error, unexpected `end', expecting end-of-input
+app/controllers/patients_controller.rb:23: syntax error, unexpected '\n', expecting =>
+app/controllers/patients_controller.rb:66: syntax error, unexpected `end', expecting end-of-input
+app/controllers/patients_controller.rb:23: syntax error, unexpected '\n', expecting =>
+app/controllers/patients_controller.rb:66: syntax error, unexpected `end', expecting end-of-input
+Started GET "/" for 127.0.0.1 at 2023-07-09 12:19:43 +0300
+  
+SyntaxError (/home/mullz/Desktop/project/hospital_management/back-end/app/controllers/patients_controller.rb:66: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/patients_controller.rb:66: syntax error, unexpected `end', expecting end-of-input
+app/controllers/patients_controller.rb:66: syntax error, unexpected `end', expecting end-of-input
+app/controllers/patients_controller.rb:66: syntax error, unexpected `end', expecting end-of-input
+Started GET "/" for 127.0.0.1 at 2023-07-09 12:20:05 +0300
+  
+SyntaxError (/home/mullz/Desktop/project/hospital_management/back-end/app/controllers/patients_controller.rb:65: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/patients_controller.rb:65: syntax error, unexpected `end', expecting end-of-input
+app/controllers/patients_controller.rb:65: syntax error, unexpected `end', expecting end-of-input
+app/controllers/patients_controller.rb:65: syntax error, unexpected `end', expecting end-of-input
+Started GET "/" for 127.0.0.1 at 2023-07-09 12:20:55 +0300
+Processing by PatientsController#login as HTML
+  [1m[36mPatient Load (95.4ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:4:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.28ms)
+Completed 401 Unauthorized in 255ms (Views: 18.7ms | ActiveRecord: 96.4ms | Allocations: 12458)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-09 12:21:00 +0300
+Processing by PatientsController#login as HTML
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:4:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 401 Unauthorized in 4ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 1000)
+
+
+Started GET "/patients" for 127.0.0.1 at 2023-07-09 12:21:20 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/patients"):
+  
+Started GET "/patients/3" for 127.0.0.1 at 2023-07-09 12:21:33 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/patients/3"):
+  
+Started GET "/patients" for 127.0.0.1 at 2023-07-09 12:21:48 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/patients"):
+  
+Started GET "/" for 127.0.0.1 at 2023-07-09 12:21:52 +0300
+Processing by PatientsController#login as HTML
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT "patients".* FROM "patients" WHERE "patients"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:4:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.25ms)
+Completed 401 Unauthorized in 7ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 821)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-09 12:26:02 +0300
+Processing by ApplicationController#index as HTML
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 9)
+Completed 200 OK in 53ms (Views: 52.5ms | Allocations: 1048)
+
+
+Started GET "/doctors" for 127.0.0.1 at 2023-07-09 12:27:01 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/doctors"):
+  
+Started GET "/doctors" for 127.0.0.1 at 2023-07-09 12:27:02 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/doctors"):
+  
+Started GET "/" for 127.0.0.1 at 2023-07-09 12:27:07 +0300
+Processing by ApplicationController#index as HTML
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 4)
+Completed 200 OK in 283ms (Views: 0.9ms | Allocations: 247)
+
+
+Started GET "/doctors" for 127.0.0.1 at 2023-07-09 12:29:28 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/doctors"):
+  
+Started GET "/rails/info/routes?path=/" for 127.0.0.1 at 2023-07-09 12:29:37 +0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"/"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.18ms)
+Completed 200 OK in 9ms (Views: 3.5ms | Allocations: 7392)
+
+
+Started GET "/rails/info/routes?path=/doc" for 127.0.0.1 at 2023-07-09 12:29:38 +0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"/doc"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 200 OK in 2ms (Views: 0.7ms | Allocations: 1134)
+
+
+Started GET "/rails/info/routes?path=/doctor" for 127.0.0.1 at 2023-07-09 12:29:39 +0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"/doctor"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 200 OK in 3ms (Views: 0.7ms | Allocations: 1133)
+
+
+Started GET "/rails/info/routes?path=/doctors" for 127.0.0.1 at 2023-07-09 12:29:40 +0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"/doctors"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 9ms (Views: 3.9ms | Allocations: 1152)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-09 13:15:13 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#index as HTML
+  [1m[36mDoctor Load (168.5ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/application_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (25.44ms)
+Completed 500 Internal Server Error in 404ms (ActiveRecord: 169.3ms | Allocations: 35505)
+
+
+  
+NoMethodError (undefined method `specialization' for #<Doctor id: 1, id!: nil, gender: nil, name: "Maria Stanton", speciality: "Cardiology", created_at: "2023-07-07 06:16:35.060699000 +0000", updated_at: "2023-07-07 06:16:35.060699000 +0000", phone: "+673 1-625-959-1540 x1535", location: "584 Nicole Lodge, New Vonhaven, ID 29410">
+Did you mean?  speciality):
+  
+app/controllers/application_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2023-07-09 13:16:48 +0300
+Processing by ApplicationController#index as HTML
+  [1m[36mDoctor Load (0.4ms)[0m  [1m[34mSELECT "doctors".* FROM "doctors"[0m
+  ↳ app/controllers/application_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (13.85ms)
+Completed 200 OK in 36ms (Views: 31.5ms | ActiveRecord: 2.6ms | Allocations: 14779)
+
+

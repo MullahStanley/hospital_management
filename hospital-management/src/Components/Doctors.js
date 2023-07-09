@@ -7,7 +7,7 @@ export default function ViewDoctors(){
     const[search, setSearch] = useState('')
 
     useEffect(() => {
-        fetch('http://127.0.0.1:3000/doctors', {
+        fetch('http://127.0.0.1:3000/doctors/login', {
             method: 'GET',
             credentials: 'include'
         })

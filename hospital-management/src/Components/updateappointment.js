@@ -11,12 +11,11 @@ export default function UpdateAppointment() {
 	const [duration, setDuration] = useState('');
 	const [appointment, setAppointment] = useState('');
 	const [doctors, setDoctors] = useState([]);
-	const [errors, setErrors] = useState([]);
 
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		fetch('http://127.0.0.1:3000/doctors', {
+		fetch('http://127.0.0.1:3000/doctors/appointments', {
 			method: 'GET',
 			credentials: 'include'
 		})
@@ -62,15 +61,6 @@ export default function UpdateAppointment() {
 		<div id="update-appointment-page">
 			<form id="update-form" onSubmit={handleUpdate}>
 				<h1>Update Appointment</h1>
-
-				{errors.length > 0 && (
-					<ul style={{ color: 'red' }}>
-						{errors.map((error, index) => {
-							return <li key={index}>{error}</li>;
-						})}
-					</ul>
-				)}
-
 				<div className="row mb-3">
 					<label className="form-label">Select Doctor</label>
 					<select

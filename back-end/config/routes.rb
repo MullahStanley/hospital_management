@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
     # For all users (nurses, doctors, patients)
-    root to: 'home#index' # Homepage
+    root to: 'application#index' # Homepage
 
     #For appointments
     post '/patients', to: 'patients#create'
@@ -54,6 +54,9 @@ Rails.application.routes.draw do
     get '/nurses/patient/:patient_id/medical_data', to: 'nurses#access_medical_data'   
 
     # For doctors
+    
+    #diplay doctors login credentials
+    get '/doctors/login', to: 'doctors#login'
 
     # Login
     post '/doctors/login', to: 'doctors#login'

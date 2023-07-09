@@ -13,7 +13,7 @@ export default function CreateAppointment() {
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		fetch('http://127.0.0.1:3000/doctors',{
+		fetch('http://127.0.0.1:3000/doctors/appointments',{
 			method: 'GET',
 			credentials: 'include'
 		})
@@ -38,7 +38,7 @@ export default function CreateAppointment() {
 
 	function handleCreate(e) {
 		e.preventDefault();
-		fetch('/create_appointment', {
+		fetch('http://127.0.0.1:3000/create_appointment', {
 			method: 'post',
 			headers: {
 				'Content-Type': 'application/json',
@@ -62,8 +62,8 @@ export default function CreateAppointment() {
 
 				{errors.length > 0 && (
 					<ul style={{ color: 'red' }}>
-						{errors.map((error, index) => {
-							return <li key={index}>{error}</li>;
+						{errors.map((error) => {
+							return <li key={error}>{error}</li>;
 						})}
 					</ul>
 				)}
